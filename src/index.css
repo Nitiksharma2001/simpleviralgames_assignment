@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  background: rgb(203, 203, 255);
+  height: 100vh;
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  font-weight: 700;
+  src: url('./src/assets/fonts/Ubuntu-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  font-weight: 500;
+  src: url('./src/assets/fonts/Ubuntu-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  font-weight: 400;
+  src: url('./src/assets/fonts/Ubuntu-Regular.ttf') format('truetype');
+}
