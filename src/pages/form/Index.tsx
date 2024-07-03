@@ -20,7 +20,7 @@ const Index = ({ headings, nextButton, prevButton, children }: IndexProps) => {
     <>
       <section className='hidden lg:flex font-ubuntu lg:items-center h-full lg:justify-center'>
         <section className='flex bg-white rounded-lg shadow-2xl w-2/3 h-3/4'>
-          <section className="bg-[url('src/assets/images/bg-sidebar-desktop.svg')] bg-no-repeat bg-cover w-[30%]">
+          <section className="bg-[url('assets/images/bg-sidebar-desktop.svg')] bg-no-repeat bg-cover w-[30%]">
             <Sidebar />
           </section>
           <section className='w-[70%]'>
@@ -47,7 +47,7 @@ const Index = ({ headings, nextButton, prevButton, children }: IndexProps) => {
         </section>
       </section>
 
-      <section className="lg:hidden font-ubuntu bg-[url('src/assets/images/bg-sidebar-mobile.svg')] bg-no-repeat bg-contain h-full flex justify-center shadow-2xl">
+      <section className="lg:hidden font-ubuntu bg-[url('assets/images/bg-sidebar-mobile.svg')] bg-no-repeat bg-contain h-full flex justify-center shadow-2xl">
         <Sidebar />
         <section className='rounded-lg shadow-2xlw-4/5 h-[75%] mt-20 w-[80%] bg-white'>
           <section className='w-full h-full p-4 '>

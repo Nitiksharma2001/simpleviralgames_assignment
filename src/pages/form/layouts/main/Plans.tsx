@@ -19,7 +19,7 @@ const Plans = () => {
   
   const data: PlanImgType[] = [
     {
-      src: 'src/assets/images/icon-arcade.svg',
+      src: 'assets/images/icon-arcade.svg',
       text: 'Arcade',
       price: {
         monthly: 9,
@@ -27,7 +27,7 @@ const Plans = () => {
       },
     },
     {
-      src: 'src/assets/images/icon-advanced.svg',
+      src: 'assets/images/icon-advanced.svg',
       text: 'Advanced',
       price: {
         monthly: 12,
@@ -35,7 +35,7 @@ const Plans = () => {
       },
     },
     {
-      src: 'src/assets/images/icon-pro.svg',
+      src: 'assets/images/icon-pro.svg',
       text: 'Pro',
       price: {
         monthly: 15,
