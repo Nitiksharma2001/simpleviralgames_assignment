@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import Index from '../../Index'
-import { CreateContextType, PlanType } from '../../../../props/FormProps'
+import { CreateContextType,  PlanType } from '../../../../props/FormProps'
 import { FormContext } from '../../../../hooks/formContext'
 interface PlanImgType extends PlanType {
   src: string
@@ -9,11 +9,14 @@ const Plans = () => {
   const {formData, setFormData, isMonthly, setIsMonthly}  = useContext(FormContext) as CreateContextType
   const onPlanHandler = (item: PlanType) => {
     setFormData(prev => {
-      return {
+      const newData =  {
         ...prev, planDetails: item
       }
+      localStorage.setItem('formData', JSON.stringify(newData))
+      return newData
     })
   }
+  
   const data: PlanImgType[] = [
     {
       src: 'src/assets/images/icon-arcade.svg',
@@ -40,6 +43,7 @@ const Plans = () => {
       },
     },
   ]
+  
   return (
     <Index
       headings={{
@@ -66,7 +70,10 @@ const Plans = () => {
         <div className='flex justify-center py-2 rounded-md bg-blue-100 w-full'>
           <div className='flex gap-4'>
             <p className='font-bold'>Monthly</p>
-            <input type='checkbox' className='toggle toggle-error' onChange={(e) => setIsMonthly(!e.target.checked)} defaultChecked={!isMonthly} />
+            <input type='checkbox' className='toggle toggle-error' onChange={(e) => {
+              localStorage.setItem('isMonthly', String(!e.target.checked))
+              setIsMonthly(!e.target.checked)
+            }} checked={!isMonthly} />
             <p className='font-bold'>Yearly</p>
           </div>
         </div>

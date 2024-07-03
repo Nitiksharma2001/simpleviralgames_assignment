@@ -1,18 +1,20 @@
 import { useContext } from 'react'
 import Index from '../../Index'
-import { CreateContextType } from '../../../../props/FormProps'
+import { CreateContextType  } from '../../../../props/FormProps'
 import { FormContext } from '../../../../hooks/formContext'
 
 const Profile = () => {
   const {formData, setFormData}  = useContext(FormContext) as CreateContextType
   const inputEventHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData(prev => {
-      return {
+      const newData = {
         ...prev, userDetails: {
           ...prev.userDetails,
           [e.target.name]: e.target.value
         }
       }
+      localStorage.setItem('formData', JSON.stringify(newData))
+      return newData
     })
   }
   return (
