@@ -34,7 +34,7 @@ const Profile = () => {
               value={formData.userDetails.name}
               onChange={inputEventHandler}
               placeholder='e.g. Stephen King'
-              className='input input-bordered input-primary w-full'
+              className='input input-bordered input-primary'
             />
           </section>
           <section className='flex flex-col gap-2'>
@@ -46,7 +46,7 @@ const Profile = () => {
               value={formData.userDetails.email}
               onChange={inputEventHandler}
               placeholder='e.g. stephenking@lorem.com'
-              className='input input-bordered input-primary w-full'
+              className='input input-bordered input-primary '
             />
           </section>
           <section className='flex flex-col gap-2'>
@@ -58,7 +58,7 @@ const Profile = () => {
               value={formData.userDetails.phone}
               onChange={inputEventHandler}
               placeholder='e.g. +1 234 567 890'
-              className='input input-bordered input-primary w-full'
+              className='input input-bordered input-primary '
             />
           </section>
         </section>

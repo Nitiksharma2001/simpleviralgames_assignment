@@ -45,6 +45,7 @@ const Plans = () => {
   ]
   
   return (
+    
     <Index
       headings={{
         primary: 'Select your plan',
@@ -53,11 +54,11 @@ const Plans = () => {
       nextButton='/add-ons'
       prevButton='/profile'
     >
-      <section className='flex flex-col gap-8'>
-        <section className='flex justify-between'>
+      <section className='flex flex-col md:gap-8 gap-4'>
+        <section className='flex md:flex-row flex-col md:gap-4 gap-4 justify-between'>
           {data.map((item, index) => {
             return (
-              <section className={`cursor-pointer border-2 ${formData.planDetails.text === item.text ? 'border-blue-700 bg-blue-100' : 'border-slate-400' } rounded-md h-48 w-40 flex flex-col justify-between items-start py-4 pl-4`} onClick={() => onPlanHandler(item)} key={index}>
+              <section className={`cursor-pointer border-2 ${formData.planDetails.text === item.text ? 'border-blue-700 bg-blue-100' : 'border-slate-400' } rounded-md md:h-48 md:w-40 flex md:flex-col flex-row md:justify-between items-start gap-4 md:gap-0 md:py-4 py-2 pl-4`} onClick={() => onPlanHandler(item)} key={index}>
                 <img src={item.src} alt='not-existed' />
                 <div>
                   <p className='text-blue-600 font-bold text-xl'>{item.text}</p>

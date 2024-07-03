@@ -79,11 +79,11 @@ const AddOns = () => {
       <section className='flex flex-col gap-4'>
         {data.map((item, index) => {
           return (
-            <section className={`border-2 border-slate-400 ${item.isChecked ? 'border-blue-500 bg-blue-50': ''} rounded-md flex justify-between items-center py-2 px-2`} key={index}>
+            <section className={`border-2 md:gap-0 gap-2 border-slate-400 ${item.isChecked ? 'border-blue-500 bg-blue-50': ''} rounded-md flex justify-between items-center py-2 px-2`} key={index}>
               <input type='checkbox' className='checkbox checkbox-primary' checked={item.isChecked} onChange={() => onAddOnHandler(item)}/>
               <div>
-                <p className='text-blue-600 font-bold'>{item.primary}</p>
-                <p className='text-slate-500'>{item.secondary}</p>
+                <p className='text-blue-600 font-bold md:text-xl text-sm'>{item.primary}</p>
+                <p className='text-slate-500 md:text-md text-sm'>{item.secondary}</p>
               </div>
               <p className='text-blue-600'>${isMonthly ? item.price.monthly : item.price.yearly}/{isMonthly ? 'mo':'yr'}</p>
             </section>
