@@ -5,6 +5,8 @@ import Profile from './pages/form/layouts/main/Profile'
 import Plans from './pages/form/layouts/main/Plans'
 import AddOns from './pages/form/layouts/main/AddOns'
 import Summary from './pages/form/layouts/main/Summary'
+import FormProvider from './hooks/formContext'
+import Confirmation from './pages/form/layouts/main/Confirmation'
 
 const router = createBrowserRouter([
   {
@@ -27,8 +29,14 @@ const router = createBrowserRouter([
     path: '/summary',
     element: <Summary />,
   },
+  {
+    path: '/confirm',
+    element: <Confirmation />,
+  },
 ])
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
+  <FormProvider>
     <RouterProvider router={router} />
+  </FormProvider>
 )

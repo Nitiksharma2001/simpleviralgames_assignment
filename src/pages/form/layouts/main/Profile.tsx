@@ -1,6 +1,7 @@
 import { useContext } from 'react'
-import Index, { FormContext } from '../../Index'
+import Index from '../../Index'
 import { CreateContextType } from '../../../../props/FormProps'
+import { FormContext } from '../../../../hooks/formContext'
 
 const Profile = () => {
   const {formData, setFormData}  = useContext(FormContext) as CreateContextType
@@ -9,7 +10,7 @@ const Profile = () => {
       return {
         ...prev, userDetails: {
           ...prev.userDetails,
-          [e.target.name]: e.target.name
+          [e.target.name]: e.target.value
         }
       }
     })

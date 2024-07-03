@@ -11,6 +11,8 @@ export interface IndexProps {
 export interface CreateContextType {
   formData: FormDataType
   setFormData: React.Dispatch<React.SetStateAction<FormDataType>>
+  isMonthly: boolean
+  setIsMonthly: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 export interface FormDataType {
