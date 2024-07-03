@@ -54,11 +54,11 @@ const Plans = () => {
       nextButton='/add-ons'
       prevButton='/profile'
     >
-      <section className='flex flex-col md:gap-8 gap-4'>
-        <section className='flex md:flex-row flex-col md:gap-4 gap-4 justify-between'>
+      <section className='flex flex-col lg:gap-8 gap-4'>
+        <section className='flex lg:flex-row flex-col lg:gap-4 gap-4 justify-between'>
           {data.map((item, index) => {
             return (
-              <section className={`cursor-pointer border-2 ${formData.planDetails.text === item.text ? 'border-blue-700 bg-blue-100' : 'border-slate-400' } rounded-md md:h-48 md:w-40 flex md:flex-col flex-row md:justify-between items-start gap-4 md:gap-0 md:py-4 py-2 pl-4`} onClick={() => onPlanHandler(item)} key={index}>
+              <section className={`cursor-pointer border-2 ${formData.planDetails.text === item.text ? 'border-blue-700 bg-blue-100' : 'border-slate-400' } rounded-lg lg:h-48 lg:w-40 flex lg:flex-col flex-row lg:justify-between items-start gap-4 lg:gap-0 lg:py-4 py-2 pl-4`} onClick={() => onPlanHandler(item)} key={index}>
                 <img src={item.src} alt='not-existed' />
                 <div>
                   <p className='text-blue-600 font-bold text-xl'>{item.text}</p>
@@ -68,7 +68,7 @@ const Plans = () => {
             )
           })}
         </section>
-        <div className='flex justify-center py-2 rounded-md bg-blue-100 w-full'>
+        <div className='flex justify-center py-2 rounded-lg bg-blue-100 w-full'>
           <div className='flex gap-4'>
             <p className='font-bold'>Monthly</p>
             <input type='checkbox' className='toggle toggle-error' onChange={(e) => {

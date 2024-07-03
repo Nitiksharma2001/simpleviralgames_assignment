@@ -16,7 +16,7 @@ const Summary = () => {
       prevButton='/add-ons'
     >
       <section className='flex flex-col gap-4 '>
-        <section className='bg-blue-50 p-4 rounded-md flex flex-col gap-4'>
+        <section className='bg-blue-50 p-4 rounded-lg flex flex-col gap-4'>
           <section className='flex justify-between'>
             <div>
               <p className='font-bold text-blue-600'>{formData.planDetails.text}({isMonthly ? 'Montly' : 'Yearly'})</p>

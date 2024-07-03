@@ -23,7 +23,7 @@ const Sidebar = () => {
 
   return (
     <>
-      <section className='md:hidden absolute top-4 mx-8'>
+      <section className='lg:hidden absolute top-4 mx-8'>
         <section className='flex gap-4'>
           {pages.map((page, index) => {
             return (
@@ -42,7 +42,7 @@ const Sidebar = () => {
           })}
         </section>
       </section>
-      <section className='hidden md:flex md:justify-center md:mt-20 md:gap-4'>
+      <section className='hidden lg:flex lg:justify-center lg:mt-20 lg:gap-4'>
         <section className='flex flex-col gap-4'>
           {pages.map((page, index) => {
             return (
